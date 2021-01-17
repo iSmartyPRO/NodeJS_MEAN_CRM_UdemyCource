@@ -1,0 +1,5 @@
+module.exports = {
+    APP_Port: 5000,
+    mongoURI: mongodbURI_here,
+    jwt: 'some secret key here'
+}
