@@ -4,6 +4,7 @@ import { SiteLayoutComponent } from './shared/layouts/site-layout/site-layout.co
 import { AuthLayoutComponent } from './shared/layouts/auth-layout/auth-layout.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AuthGuard } from './shared/classes/auth.guard'
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '', component: SiteLayoutComponent, children: [
+    path: '', component: SiteLayoutComponent, canActivate: [AuthGuard], children: [
 
     ]
   }
